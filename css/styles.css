@@ -175,15 +175,15 @@ body {
 
 
   .language-item:nth-child(1) .language-button {
-    background-image: url(../img/ukraine.webp); /* фон для первого элемента */
+    background-image: url(../img/ukraine.webp); /* background 1 */
 }
 
   .language-item:nth-child(2) .language-button {
-    background-image: url(../img/uk.png); /* фон для второго элемента */
+    background-image: url(../img/uk.png); /* background 2 */
 }
 
   .language-item:nth-child(3) .language-button {
-    background-image: url(../img/poland_.png); /* фон для третьего элемента */
+    background-image: url(../img/poland_.png); /* background 3 */
 }
 
 

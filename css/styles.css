@@ -3,11 +3,11 @@
   --social-facebook: url('../img/facebook.png');
   --social-youtube: url('../img/youtube.png');
   --social-insta: url('../img/insta.png');
-  --arrow-right: url(../img//arrow_right.png);
-  --arrow-right-hover: url(../img//arrow_right_hover.png);
+  --arrow-right: url('../img/arrow_right.png');
+  --arrow-right-hover: url('../img/arrow_right_hover.png');
   /* color vars  */
   --hard-blue: #00A8F0;
-  --primary-black: #00000000;
+  --primary-black: #000;
   --primary-blue: #C4ECFC;
   --transparent-blue: #f8f9fa9a;
 }
@@ -39,7 +39,7 @@ body {
     position: fixed;
     top: 0;
     padding: 15px;
-    right: -80%;; /* zero point of animation */
+    right: -80%; /* zero point of animation */
     height: 100%;
     width: 80%; /* when menu open */
     background-color: var(--transparent-blue);
@@ -72,7 +72,7 @@ body {
     justify-content: center;
     align-items: center;
     border: none;
-    color: var(--primary-black);;
+    color: var(--primary-black);
     font-size: 14px;
 }
 
@@ -176,7 +176,7 @@ body {
 }
 
   .language-item.hovered {
-    border-bottom: 2px solid var(--primary-black);;
+    border-bottom: 2px solid var(--primary-black);
 }
 
 
@@ -201,7 +201,6 @@ body {
   .topbar_wrapper {
     display: flex;
     margin-bottom: 50px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -211,7 +210,7 @@ body {
     width: 50%;
     border: 0;
     text-align: center;
-    border-bottom: 1px solid var(--primary-black);;
+    border-bottom: 1px solid var(--primary-black);
     border-radius: 0;
     background-color: transparent;
     outline: none;
@@ -228,7 +227,7 @@ body {
 
   .finder-input::placeholder {
     font-size: 17px;
-    color: var(--primary-black);;
+    color: var(--primary-black);
 }
 
 /* site road map  */

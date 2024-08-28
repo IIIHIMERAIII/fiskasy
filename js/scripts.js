@@ -19,3 +19,14 @@ $('.language-button').hover(
         $(this).parent().removeClass('hovered');
     }
 );
+
+// Hero switcher
+
+$(document).ready(function() {
+
+    $('#switcherButton').click(function() {
+        console.log('Button clicked'); // Debuging test 
+        $(this).toggleClass('active');
+        $('.hero-switcher').toggleClass('active');
+    });
+});

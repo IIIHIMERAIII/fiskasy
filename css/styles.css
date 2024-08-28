@@ -3,10 +3,12 @@
   --social-facebook: url('../img/facebook.png');
   --social-youtube: url('../img/youtube.png');
   --social-insta: url('../img/insta.png');
-  --arrow-right: url('../img/arrow_right.png');
-  --arrow-right-hover: url('../img/arrow_right_hover.png');
+  --arrow: url('../img/arrow.png');
+  --arrow-hover: url('../img/arrow_hover.png');
+  --switcher-image1: url('../img/hero-img1.png');
   /* color vars  */
   --hard-blue: #00A8F0;
+  --hard-red: #DF270A;
   --primary-black: #000;
   --primary-blue: #C4ECFC;
   --transparent-blue: #f8f9fa9a;
@@ -266,10 +268,13 @@ body {
 
 .hero-switcher {
   position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   width: 600px;
   height: 600px;
   background-color: #00A8F0;
-  border-radius: 100%;
+  border-radius: 50%;
   left: 20px;
   margin-left: -60%;
   margin-top: 20%;
@@ -284,9 +289,46 @@ body {
   border: none;
   background-color: transparent;
   background-size: contain;
-  background-image: var( --arrow-right);
+  background-image: var( --arrow);
 }
 
 .switcher-button:hover {
-  background-image: var( --arrow-right-hover);
+  background-image: var( --arrow-hover);
+}
+
+.switcher-button.active {
+  background-image: var(--arrow); /* Replace with your actual image path */
+  left: calc(100% - 28px); /* Adjust right position for left side */
+}
+
+.switcher-button.active:hover {
+  background-image: var(--arrow-right); /* Replace with your actual image path */
+  left: calc(100% - 28px); /* Adjust right position for left side */
+}
+
+.hero-switcher.active {
+  transform: scaleX(-1); /* Flip horizontally */
+  margin-left: 0; /* Adjust margin to align with new position */
+  background-color: var(--hard-red);
+}
+
+.image-wrapper {
+  position: absolute;
+  left: 13%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border: 2px solid red;
+  border-radius: 50%;
+  width: 60%;
+  height: 60%;
+}
+
+
+.switcher-image {
+  width: 50%;
+  height: 50%;
+  background-image: var(--switcher-image1);
+  background-size: cover;
+  background-position: center;
 }

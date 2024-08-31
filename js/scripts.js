@@ -64,3 +64,20 @@ $(document).ready(function () {
         },
     });
 });
+
+
+// catalog logic
+
+$(document).ready(function() {
+    $('.catalog-card').each(function() {
+      const $card = $(this);
+      const index = $card.data('bg');
+      
+      // Ensure the index is within the range
+      if (index >= 1 && index <= 18) { 
+        const imageUrl = `./img/cat${index}.png`;
+        
+        $card.css('background-image', `url(${imageUrl})`);
+      }
+    });
+  });

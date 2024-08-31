@@ -429,6 +429,9 @@ body {
 
 .hero-switcher.active .price-title {
   transform: scaleX(-1);
+}
+
+.price-title {
   color: var(--primary-white);
 }
 
@@ -452,13 +455,16 @@ body {
 
 .promotion-wrapper {
   position: relative; 
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .promotion-title {
   color: var(--primary-black);
   font-weight: bold;
+}
+
+
+li.price-title p:nth-of-type(2) {
+  font-weight: normal; /* second child <p> */
 }
 
 .swiper-container {
@@ -469,6 +475,7 @@ body {
 }
 
 .swiper-wrapper {
+  gap: 37px;
   height: 150px;
 }
 

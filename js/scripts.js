@@ -55,14 +55,9 @@ $(document).ready(function() {
 
 $(document).ready(function () {
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3, // 3 items per page
-        spaceBetween: 37, // space between items
+        slidesPerView: 3/0.7, // 3 items per page + calculate with
         centeredSlides: true, // centered items
         loop: true, // swaping loop
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',

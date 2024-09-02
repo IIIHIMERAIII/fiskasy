@@ -51,10 +51,13 @@ $(document).ready(function() {
     })
 });
 
-// promotion swiper 
+//Swipers 
+
+
+// promotion swiper
 
 $(document).ready(function () {
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.promotion-swiper', {
         slidesPerView: 3/0.7, // 3 items per page + calculate with
         centeredSlides: true, // centered items
         loop: true, // swaping loop
@@ -64,6 +67,29 @@ $(document).ready(function () {
         },
     });
 });
+
+// partners swiper 
+
+$(document).ready(function () {
+    var swiper = new Swiper('.partners-swiper', {
+        slidesPerView: 3 / 1.4, 
+        centeredSlides: true, 
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            transitionStart: function () {
+                // dynemic calc translate
+                var currentTranslate = this.translate;
+                var desiredTranslate = currentTranslate - 110; 
+                this.setTranslate(desiredTranslate); // new translate param
+            },
+        },
+    });
+});
+
 
 
 // catalog logic

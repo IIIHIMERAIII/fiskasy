@@ -3,8 +3,10 @@
   --social-facebook: url('../img/facebook.png');
   --social-youtube: url('../img/youtube.png');
   --social-insta: url('../img/insta.png');
-  --arrow: url('../img/arrow.png');
-  --arrow-hover: url('../img/arrow_hover.png');
+  --arrow-left: url('../img/arrow-left.png');
+  --arrow-left-hover: url('../img/arrow-left-hover.png');
+  --arrow-right: url('../img/arrow-right.png');
+  --arrow-right-hover: url('../img/arrow_right-hover.png');
   --switcher-image1: url('../img/hero-img1.png');
   --switcher-image2: url('../img/hero-img2.png');
   --flag-image1: url('../img/flag_1.webp');
@@ -321,28 +323,31 @@ body {
 .switcher-button {
   position: absolute;
   top: 50%;
-  left: calc(100% - 20px);
   width: 30px;
   height: 30px;
   border: none;
   background-color: transparent;
   background-size: contain;
-  background-image: var( --arrow);
 }
 
-.switcher-button:hover {
-  background-image: var( --arrow-hover);
+.switcher-button.left {
+  background-image: var(--arrow-left);
 }
 
-.switcher-button.active {
-  background-image: var(--arrow); /* Replace with your actual image path */
-  left: calc(100% - 20px); /* Adjust right position for left side */
+.switcher-button.left:hover {
+  background-image: var(--arrow-left-hover);
 }
 
-.switcher-button.active:hover {
-  background-image: var(--arrow-hover); /* Replace with your actual image path */
-  left: calc(100% - 20px); /* Adjust right position for left side */
+.switcher-button.right {
+  background-image: var(--arrow-right);
 }
+
+.switcher-button.right:hover {
+  background-image: var(--arrow-right-hover);
+}
+
+
+
 
 
 
@@ -800,7 +805,7 @@ li.price-title p:nth-of-type(2) {
     display: none;
   }
 
-  .button-toggler {
+  .switcher-button .left {
     display: none;
   }
 }
@@ -930,9 +935,18 @@ li.price-title p:nth-of-type(2) {
   }
 
   .switcher-button {
-    position: static;
+    position: absolute;
     z-index: 10;
     width: 70px;
     height: 70px;
+  }
+
+  .switcher-button.left {
+    left: -3%;
+  }
+
+
+  .switcher-button.right {
+    right: -3%;
   }
 }

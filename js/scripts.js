@@ -24,7 +24,7 @@ $('.language-button').hover(
 
 $(document).ready(function() {
 
-    $('#switcherButton').click(function() {
+    $('.switcher-button').click(function() {
         console.log('Button clicked'); // Debuging log
         $(this).toggleClass('active');
         $('.hero-switcher').toggleClass('active');
@@ -40,11 +40,11 @@ $(document).ready(function() {
     $('#switcherButton').click(function() {
         if (isDefault) {
             // Change text to alternative values
-            $('#productName').html('ELZAB Zeta <br/> Online');
+            $('#productName').html('ELZAB Zeta Online');
             $('#priceValue').text('1990,00 zł');
         } else {
             // Change text back to default values
-            $('#productName').html('DATECS WP-50 <br/> Wi-FI Online');
+            $('#productName').html('DATECS WP-50 Wi-FI Online');
             $('#priceValue').text('1429,00 zł');
         }
         isDefault = !isDefault; // Toggle state

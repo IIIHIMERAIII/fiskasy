@@ -37,7 +37,7 @@ $(document).ready(function() {
     // Toggle state
     let isDefault = true;
 
-    $('#switcherButton').click(function() {
+    $('.switcher-button').click(function() { 
         if (isDefault) {
             // Change text to alternative values
             $('#productName').html('ELZAB Zeta Online');
@@ -50,7 +50,6 @@ $(document).ready(function() {
         isDefault = !isDefault; // Toggle state
     })
 });
-
 //Swipers 
 
 
@@ -72,19 +71,18 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     var swiper = new Swiper('.partners-swiper', {
-        slidesPerView: 3 / 1.4, 
         centeredSlides: true, 
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        on: {
-            transitionStart: function () {
-                // dynemic calc translate
-                var currentTranslate = this.translate;
-                var desiredTranslate = currentTranslate - 110; 
-                this.setTranslate(desiredTranslate); // new translate param
+        breakpoints: {
+            1200: {
+                slidesPerView: 4 / 0.8, // 4 items per page + calculate with
+            },
+            0: {
+                slidesPerView: 1 / 0.6, // Value for screens smaller than 1200px
             },
         },
     });
@@ -107,3 +105,5 @@ $(document).ready(function() {
       }
     });
   });
+
+// media ruls styles 

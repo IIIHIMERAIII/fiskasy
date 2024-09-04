@@ -143,12 +143,64 @@
   <input type="text" class="finder-input" placeholder="Wyszukaj...">
   </nav>
 </header>
-
+<div class="desktop-subheader">
+  <ul class="feedback-wrapper">
+    <li class="feedback-item">
+      <p class="feedback-text">MASZ PYTANIE?</p>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">WYŚLIJ WIADOMOŚĆ</a>
+    </li>
+  </ul>
+  <ul class="social-wrapper">
+    <li class="social-item">
+      <a class="social-link" href="#"></a>
+    </li>
+    <li class="social-item">
+      <a class="social-link" href="#"></a>
+    </li>
+    <li class="social-item">
+      <a class="social-link" href="#"></a>
+    </li>
+    <li class="social-item">
+      <a class="social-link" href="#"></a>
+    </li>
+  </ul>
+  <ul class="navmap-wrapper">
+    <li class="navmap-title"><p class="navmap-text">WYBIERZ SWOJĄ BRANŻE I POZNAJ URZĄDZENIA</p></li>
+    <li class="navmap-link">Salon fryzjerski, salon kosmetyczny</li>
+    <li class="navmap-link">Fitness i siłownie</li>
+    <li class="navmap-link">Branża budowlana</li>
+    <li class="navmap-link">Lekarze</li>
+    <li class="navmap-link">Prawnicy</li>
+    <li class="navmap-link">Mała gastronomia</li>
+    <li class="navmap-link">Warsztat samochodowy, wulkanizacja</li>
+    <li class="navmap-link">Apteka</li>
+    <li class="navmap-link">Taxi</li>
+    <li class="navmap-link">Piekarnia i cukiernia</li>
+    <li class="navmap-link">Mały punkt handlowo usługowy</li>
+    <li class="navmap-link">Sklep internetowy</li>
+  </ul>
+  <ul class="navmap-wrapper">
+    <li class="navmap-title"><p class="navmap-text">PORADNIK</p></li>
+    <li class="navmap-link">Jak wybrać urządzenie fiskalne</li>
+    <li class="navmap-link">Oprogramowanie do zarządzania firmą</li>
+    <li class="navmap-link">Sklep (systemy sprzedaży)</li>
+    <li class="navmap-link">Restauracja</li>
+  </ul>
+  <ul class="navmap-wrapper">
+    <li class="navmap-title"><p class="navmap-text">INFORMACJE</p></li>
+    <li class="navmap-link">Zmiana VAT. Programowanie kasy</li>
+    <li class="navmap-link">Przeglądy okresowe</li>
+    <li class="navmap-link">Porady prawne</li>
+    <li class="navmap-link">Często zadawne pytania</li>
+  </ul>
+</div>
 <!-- hero -->
 
 <section class="hero-wrapper">
     <div class="hero-switcher" id="heroSwitcher">
-      <button class="switcher-button left"></button>
+      <button class="switcher-button left" id="switcherButton"></button>
       <div class="image-wrapper">
         <div class='switcher-image'></div>
       </div>
@@ -163,23 +215,21 @@
         <p>PORÓWNAJ</p>
       </li>
     </ul>
-    <ul class="price-wrapper">
-      <li class="price-title">
-        <p>MASZ PYTANIE?</p>
-        <p>WYŚLIJ WIADOMOŚĆ</p>
-      </li>
-      <li class="price-elipse">
-        <p>cenna netto</p>
-        <p id="priceValue">1429,00 zł</p>
-      </li>
+    <ul class="question-wrapper">
+      <li><p>MASZ PYTANIE?</p></li>
+      <li><p>WYŚLIJ WIADOMOŚĆ</p></li>
     </ul>
-    <button class="switcher-button right"></button>
+    <ul class="price-elipse">
+      <li><p>cenna netto</p></li>
+      <li><p id="priceValue">1429,00 zł</p></li>
+    </ul>
+    <button class="switcher-button right" id="switcherButton"></button>
     </div>
 </section>
 
 <!-- Promotion -->
 
-<section class="promotion-wrapper">
+<section class="shop-wrapper">
   <p class="promotion-title">PROMOCJE</p>
   <div class="promotion-swiper">
     <ul class="swiper-wrapper promotion-list">
@@ -215,11 +265,10 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-</section>
 
 <!-- Cataloge -->
 
-<section class="catalog-wrapper">
+  <p class="catalog-title">KATALOG PRODUKTÓW</p>
   <ul class="catalog-list">
     <li class="catalog-card" data-bg='1'>
       <p class="card-title">Drukarki paragonowe</p>
@@ -305,7 +354,7 @@
 
 <section class="about-wrapper">
   <p class="about-title">KONTAKT</p>
-  <ul class="contact-wrapper">
+  <ul class="contact-wrapper mobile">
     <li class="contact-item" data-background="contact-item1">
       <p class="contact-link">ESC SA Centrum - ul. Mieszczańska 19, 30-313 Kraków</p>
       <p class="contact-link">ESC SA Nowa Huta - Osiedle Teatralne 3, 31-945 Kraków</p>
@@ -329,12 +378,38 @@
     <span class="left-map"></span>
     <span class="right-map"></span>
     <span class="map-logo">
-      <span class="logo-esc" style="width: 25px; height: 25px;"></span>
+      <span class="logo-esc"></span>
     </span>
   </div>
-  <p style="font-weight: bold">wyznacz trasę!</p>
+  <div class="contact-desktop">
+    <ul>
+      <li class="contact-item" data-background="contact-item1">
+        <p class="contact-link">ESC SA Centrum - ul. Mieszczańska 19, 30-313 Kraków</p>
+      </li>
+      <li class="contact-item" data-background="contact-item3">
+        <p class="contact-link">sprzedaz@escsa.pl</p>
+      </li>
+      <li class="contact-item" data-background="contact-item2">
+        <p class="contact-link">+48 12 633 73 08</p>
+        <p class="contact-link">+48 12 656 51 58</p>
+      </li>
+    </ul>
+        <p class="contact-link">poniedziałek - piątek: 9.00 - 17.00</p>
+    <ul>
+      <li class="contact-item">
+        <p class="contact-link">ESC SA Nowa Huta - Osiedle Teatralne 3, 31-945 Kraków</p>
+      </li>
+      <li class="contact-item">
+        <p class="contact-link">sprzedaz@escsa.pl</p>
+      </li>
+      <li class="contact-item">
+        <p class="contact-link">+48 12 656 33 64</p>
+      </li>
+    </ul>
+  </div>
+  <p class="map-subtitle">wyznacz trasę!</p>
   <p class="about-title">O NAS</p>
-  <p style="font-size: 12px;">
+  <p class="about-descr">
     Zajmujemy się kompleksową obsługą informatyczną przedsiębiorstw oraz wdrażaniem oprogramowania do zarządzania sprzedażą i gospodarką magazynową. Prezentowane na stronie produkty to oprócz oprogramowania szeroko rozumiana elektronika wyposażenia handlu. Na naszym portalu znajdą Państwo atrakcyjną ofertę urządzeń fiskalnych w korzystnych cenach: kasy fiskalne, czy też inaczej nazywane kasy rejestrujące, drukarki fiskalne, terminale fiskalne oraz zarówno fiskalne, jak i niefiskalne systemy POS. Ponadto mamy w ofercie sklepowe wagi elektroniczne: etykietujące, kalkulacyjne i platformowe. Całość uzupełnia oferta terminali płatniczych, kolektorów danych, drukarek kart i etykiet, drukarek paragonowych tzw. bonowników. Znajdą Państwo u nas również szeroki asortyment akcesoriów do sprzedawanych urządzeń jak pokrowce do kas fiskalnych, szuflady kasowe, rolki do kas i drukarek fiskalnych czy też metkownice. Oferowane przez nas urządzenia fiskalne wyprodukowane są przez czołowych na rynku producentów, jak: Posnet, ElzaB, Novitus. Od jakiegoś czasu w naszej ofercie dostępne są nowego typu kasy fiskalne tzw. kasy fiskalne online, które umożliwiają łączenie się z Centralnym Repozytorium Kas. Urządzenia fiskalne dostępne na naszej stronie są nowoczesne, funkcjonalne i różnorodne po to, aby mogły być wykorzystywane w małych i dużych biznesach oraz sprzedaży mobilnej. W szerokiej ofercie kas i drukarek sklepowych mamy te najnowocześniejsze z kopią elektroniczną czy też on-line ready ale też sprawdzone nieco starsze modele z dwoma rolkami. Sprzęt zakupiony w naszej firmie otaczamy opieką serwisową oraz wykonujemy ustawowe przeglądy okresowe kas i drukarek fiskalnych w bardzo atrakcyjnych cenach. Naszym klientom staramy się w miarę możliwości przypominać o ustawowych obowiązkach w zakresie fiskalnych kas i drukarek sklepowych. Obecnie wychodząc naprzeciw oczekiwaniom rynku poszerzyliśmy wachlarz urządzeń fiskalnych o te niewielkich rozmiarów, zaprojektowanych dla małych i średnich firm lub do prowadzenia sprzedaży przenośnej lub obwoźnej a wyróżniające się atrakcyjnymi cenami. Jeśli szukasz kasy fiskalnej w Krakowie to dobrze trafiłeś. Warto przeglądać dział promocji prezentowany na górze naszej strony. W dziale tym prezentujemy urządzenia, w cenach najtańszych w Krakowie. Drogi kliencie jeśli tak nie jest i znajdziesz promowane urządzenie taniej u konkurencji dzwoń do naszych handlowców. Postaramy się zrobić wszystko abyś był zadowolony z ceny. Oferowany przez nas sprzęt fiskalny wyprodukowany jest przez firmy wiodące na rynku urządzeń fiskalnych tj. Novitus, Posnet, Elzab, Datecs, iNNOVA, Incotex, Aclas. Strona www.kasy-fiskalne-krakow.pl jest własnością firmy ESC SA Portal skupia się na obsłudze firm w Krakowie oraz całej Małopolsce. Obsługa ogólnopolska urządzeń fiskalnych opisana jest a stronie fiskasy.pl
   </p>
 </section>
@@ -365,7 +440,7 @@
 <!-- footer  -->
 
 <footer class="footer-wrapper">
-  <span class="logo-esc" style="width: 50px; height: 50px;"></span>
+  <span class="logo-esc"></span>
   <ul class="contact-wrapper">
     <li class="contact-item" data-background="contact-item1">
       <p class="contact-link">ESC SA Centrum - ul. Mieszczańska 19, 30-313 Kraków</p>
@@ -386,6 +461,9 @@
       <p class="contact-link">(telefon dyżurny - 8:00 - 18:00 w dni robocze)</p>
     </li>
   </ul>
+  <a class="footer-brand" href="#">
+    <img src="../fiskasy/img/logo.png" alt="Logo" style="height: 70px;">
+  </a>
 </footer>
 
 

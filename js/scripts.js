@@ -57,13 +57,20 @@ $(document).ready(function() {
 
 $(document).ready(function () {
     var swiper = new Swiper('.promotion-swiper', {
-        slidesPerView: 3/0.7, // 3 items per page + calculate with
-        centeredSlides: true, // centered items
+        centeredSlides: false, // centered items
         loop: true, // swaping loop
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            1200: {
+                slidesPerView: 'auto', // 3 items per page + calculate with
+            },
+            0: {
+                slidesPerView: 3/0.7, // Value for screens smaller than 1200px
+            },
+        },  
     });
 });
 

@@ -124,6 +124,10 @@ body {
   display: none;
 }
 
+.language-desktop {
+  display: none;
+}
+
   /* Classs */
 
 
@@ -146,7 +150,6 @@ body {
 }
 
   .feedback-text {
-    font-size: 20px;
     font-weight: bold;
 }
 
@@ -346,6 +349,8 @@ body {
 }
 
 .switcher-button.right {
+  position: absolute;
+  right: -3%;
   background-image: var(--arrow-right);
 }
 
@@ -355,10 +360,10 @@ body {
 
 .image-wrapper {
   position: absolute;
-  left: 13%;
+  left: 7%;
   width: 60%;
   height: 60%;
-  border: 1px solid var(--primary-black);
+  border: 3px solid var(--primary-black);
   border-radius: 50%;
   border-style: dashed;
 }
@@ -386,16 +391,15 @@ body {
 /* text and info section */
 
 .info-wrapper {
-  width: 100%;
-  position: relative;
+  width: 45%;
+  position: absolute;
   flex-direction: column;
   display: flex;
-  bottom: 20%;
-  left: 60%;
+  top: 10%;
+  left: 55%;
   gap: 50px;
   text-align: center;
   font-weight: bold;
-  white-space: nowrap;
 }
 
 
@@ -439,12 +443,17 @@ body {
 }
 
 .question-wrapper {
+  position: absolute;
+  bottom: 6%;
   color: var(--primary-white);
 }
 
 .price-elipse {
-  width: 200px;
-  height: 200px;
+  bottom: -2%;
+  left: 70%;
+  position: absolute;
+  width: 245px;
+  height: 245px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -464,6 +473,14 @@ body {
   position: relative; 
 }
 
+.promotion-list {
+  gap: 37px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 22px;
+}
+
 .promotion-title {
   color: var(--primary-black);
   font-weight: bold;
@@ -475,18 +492,15 @@ li.price-title p:nth-of-type(2) {
 }
 
 .promotion-swiper {
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.promotion-list {
-  gap: 37px;
-  width: 812px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
 .promotion-item {
+  height: 150px;
+  padding-bottom: 30px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -567,12 +581,19 @@ li.price-title p:nth-of-type(2) {
 
 /* catalog section */
 
+.shop-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .catalog-title {
   display: none;
 }
 
 .catalog-list {
+  width: 80%;
   display: grid;                  /* Use CSS Grid layout */
   grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */
   gap: 40px 60px;                      /* Set space between grid items */
@@ -597,6 +618,8 @@ li.price-title p:nth-of-type(2) {
 }
 
 .catalog-descr {
+  padding-left: 36px;
+  padding-right: 36px;
   font-size: 12px;
   margin-bottom: 20px;
 }
@@ -632,6 +655,7 @@ li.price-title p:nth-of-type(2) {
 
 
 .about-title {
+  margin-bottom: 35px;
   text-align: start;
   width: 100%;
   position: relative;
@@ -768,9 +792,7 @@ li.price-title p:nth-of-type(2) {
 /* partners section swiper*/
 
 .partners-wrapper {
-  height: 30px;
   margin-bottom: 120px;
-  width: 100%;
   position: relative;
 }
 
@@ -778,7 +800,7 @@ li.price-title p:nth-of-type(2) {
   gap: 10px;
 }
 
-.swiper-slide .partners-slide {
+.partners-slide {
   width: 200px
 }
 
@@ -860,6 +882,7 @@ li.price-title p:nth-of-type(2) {
   }
 
   .feedback-wrapper {
+    font-size: 30px;
     margin-bottom: 33px;
     text-align: start;
   }

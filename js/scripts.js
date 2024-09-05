@@ -78,7 +78,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     var swiper = new Swiper('.partners-swiper', {
-        centeredSlides: false, 
+        centeredSlides: true,
+        spaceBetween: 30,
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -89,7 +90,7 @@ $(document).ready(function () {
                 slidesPerView: 4 / 0.8, // 4 items per page + calculate with
             },
             0: {
-                slidesPerView: 1 / 0.6, // Value for screens smaller than 1200px
+                slidesPerView: 3/1.4 // Value for screens smaller than 1200px
             },
         },
     });

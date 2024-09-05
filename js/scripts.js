@@ -71,7 +71,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     var swiper = new Swiper('.partners-swiper', {
-        centeredSlides: true, 
+        centeredSlides: false, 
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',

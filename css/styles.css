@@ -23,6 +23,7 @@
   --contact-image3: url('../img/con3.png');
   --contact-image4: url('../img/con4.png');
   --contact-image5: url('../img/con5.png');
+  --contact-image6: url('../img/con6.png');
   --map-left: url('../img/map-l.png');
   --map-right: url('../img/map-r.png');
   --logo-esc: url('../img/logo_esc.png');
@@ -36,6 +37,7 @@
   --hard-red: #DF270A;
   --primary-black: #000;
   --primary-white: #ffffff;
+  --transparent-white: #ffffffa1;
   --primary-blue: #C4ECFC;
   --transparent-blue: #f8f9fa9a;
   /* shadows and other  */
@@ -585,6 +587,7 @@ li.price-title p:nth-of-type(2) {
 }
 
 .catalog-card {
+  position: relative;
   height: 176px;
   padding-top: 15px;
   border-radius: 14px;
@@ -609,7 +612,7 @@ li.price-title p:nth-of-type(2) {
   justify-content: center;
   align-items: center;
   display: flex;
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 80%;
   width: 50px;
@@ -639,7 +642,6 @@ li.price-title p:nth-of-type(2) {
   text-align: start;
   width: 100%;
   position: relative;
-  margin-bottom: 40px; 
   font-weight: bold;
   margin-right: auto;
 }
@@ -713,6 +715,10 @@ li.price-title p:nth-of-type(2) {
   background-image: var(--contact-image5);
 }
 
+.contact-item[data-background="contact-item6"]::before { /*just use in desktop */
+  background-image: var(--contact-image6);
+}
+
 /* map section  */
 
 .map-wrapper {
@@ -748,7 +754,8 @@ li.price-title p:nth-of-type(2) {
   transform: translate(-50%, -50%);
   width: 54px;
   height: 54px;
-  background-color: var(--primary-white);
+  backdrop-filter: blur(4px);
+  background-color: var(--transparent-white);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -856,6 +863,7 @@ li.price-title p:nth-of-type(2) {
     margin-top: 10%;
     position: absolute;
     padding-left: 145px;
+    display: inline;
   }
 
   .feedback-wrapper {
@@ -917,6 +925,10 @@ li.price-title p:nth-of-type(2) {
     width: 55%;
     left: 40%;
     white-space: normal;
+  }
+
+  .question-wrapper{
+    display: none;
   }
 
   .info-title {
@@ -1034,6 +1046,27 @@ li.price-title p:nth-of-type(2) {
   }
 
 
+  /* card style */
+
+  .catalog-card {
+    position: relative;
+    height: 330px;
+    width: 240px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-price {
+    top: 60%;
+    left: 65%;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+  }
+
+
   .catalog-descr {
     display: none;
   }
@@ -1059,6 +1092,7 @@ li.price-title p:nth-of-type(2) {
   }
 
   .about-descr {
+    margin-top: 60px;
     font-size: 20px;
   }
 
@@ -1071,11 +1105,26 @@ li.price-title p:nth-of-type(2) {
 .contact-desktop {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 95%; /* place for pseudo elements */
+}
+
+.contact-list.right {
+  transform: scaleX(-1); /* reverse list  */
+}
+
+.contact-item.right::before {
+  transform: scaleX(-1); /* reverse icon back to normal position*/
+}
+
+.contact-list.right .contact-link {
+  transform: scaleX(-1); /* reverse text back to normal position*/
+  text-align: end;
 }
 
 .map-wrapper {
   height: 315px;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .map-logo {
@@ -1103,6 +1152,10 @@ li.price-title p:nth-of-type(2) {
     display: flex;
     padding-left: 145px;
     padding-right: 145px;
+  }
+  
+  .partners-swiper {
+    width: 100%;
   }
 
   .swiper-wrapper {

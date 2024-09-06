@@ -59,6 +59,7 @@ $(document).ready(function () {
     var swiper = new Swiper('.promotion-swiper', {
         centeredSlides: false, // centered items
         loop: true, // swaping loop
+        spaceBetween: 40,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -68,7 +69,8 @@ $(document).ready(function () {
                 slidesPerView: 'auto', // 3 items per page + calculate with
             },
             0: {
-                slidesPerView: 3/0.7, // Value for screens smaller than 1200px
+                slidesPerView: 3, // Value for screens smaller than 1200px
+                spaceBetween: 35,
             },
         },  
     });
@@ -87,7 +89,7 @@ $(document).ready(function () {
         },
         breakpoints: {
             1200: {
-                slidesPerView: 4 / 0.8, // 4 items per page + calculate with
+                slidesPerView: 'auto', // 4 items per page + calculate with
             },
             0: {
                 slidesPerView: 3/1.4 // Value for screens smaller than 1200px

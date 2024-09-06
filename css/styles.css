@@ -473,15 +473,9 @@ body {
   position: relative; 
 }
 
-.promotion-list {
-  gap: 37px;
-  width: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 22px;
-}
-
 .promotion-title {
+  margin-bottom: 20px;
+  text-align: start;
   color: var(--primary-black);
   font-weight: bold;
 }
@@ -491,16 +485,8 @@ li.price-title p:nth-of-type(2) {
   font-weight: normal; /* second child <p> */
 }
 
-.promotion-swiper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-
 .promotion-item {
   height: 150px;
-  padding-bottom: 30px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -521,6 +507,34 @@ li.price-title p:nth-of-type(2) {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+
+.swiper-section {
+  padding-left: 15px;
+  padding-right: 40px;
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+
+
+.promotion-item {
+  width: 90px;
 }
 
 
@@ -545,8 +559,6 @@ li.price-title p:nth-of-type(2) {
 .swiper-slide[data-swiper-slide-index="3"] .promotion-icon {
   background-image: var(--promo-image4); /* background 4 */
 }
-
-
 
 
 .promotion-descr {
@@ -593,7 +605,6 @@ li.price-title p:nth-of-type(2) {
 }
 
 .catalog-list {
-  width: 80%;
   display: grid;                  /* Use CSS Grid layout */
   grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */
   gap: 40px 60px;                      /* Set space between grid items */
@@ -629,7 +640,7 @@ li.price-title p:nth-of-type(2) {
   align-items: center;
   display: flex;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 80%;
   width: 50px;
   height: 50px;
@@ -782,8 +793,8 @@ li.price-title p:nth-of-type(2) {
 
 
 .logo-esc {
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   display: block;
   background-image: var(--logo-esc);
   background-size: contain;
@@ -964,8 +975,9 @@ li.price-title p:nth-of-type(2) {
   }
 
   .info-wrapper {
+    align-items: center;
     width: 55%;
-    left: 40%;
+    left: 45%;
     white-space: normal;
   }
 
@@ -978,7 +990,13 @@ li.price-title p:nth-of-type(2) {
     font-size: 70px;
   }
 
+  .hero-switcher.active .info-title { 
+    transform: scaleX(-1);
+    white-space: nowrap;
+  }
+
   .info-pretitle {
+    width: 80%;
     margin:0;
     font-size: 35px;
   }
@@ -998,8 +1016,8 @@ li.price-title p:nth-of-type(2) {
   .switcher-image {
     pointer-events: auto;
     position: absolute;
-    left: -74%;
-    bottom: -80%;
+    left: -60%;
+    bottom: -85%;
     width: 230%;
     height: 230%;
     rotate: 20deg;
@@ -1018,13 +1036,15 @@ li.price-title p:nth-of-type(2) {
 
   .price-elipse {
     position: relative;
-    top: 25%;
+    top: 30%;
+    left: 30%;
     width: 376px;
     height: 376px;
     font-size: 55px;
   }
 
   .switcher-button {
+    top: 35%;
     position: absolute;
     z-index: 10;
     width: 70px;
@@ -1052,7 +1072,17 @@ li.price-title p:nth-of-type(2) {
 
 /* promotion section  */
 
+  .swiper-section {
+    width: 40%;
+    position: relative;
+  }
+
+  .promotion-item {
+    width: 240px;
+  }
+
   .promotion-title {
+    text-align: center;
     color: var(--primary-white);
     font-size: 45px;
   }
@@ -1077,20 +1107,12 @@ li.price-title p:nth-of-type(2) {
   }
 
   .promotion-swiper {
-    position: relative;
-    padding-bottom: 60px; /* place for pseudo */
-    margin-bottom: 25px;
+    overflow: hidden;
+    padding-bottom: 45px;
+  }
+
+  .promotion-item {
     height: 330px;
-  }
-
-  .promotion-list {
-    gap: 46px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .swiper-slide { 
-    width: 240px 
   }
 
   .swiper-button-next, .swiper-button-prev {
@@ -1102,17 +1124,13 @@ li.price-title p:nth-of-type(2) {
 
   .swiper-button-next {
     background-image: var(--arrow-right);
+    right: -10%;
   }
 
   .swiper-button-prev {
     background-image: var(--arrow-left);
+    left: -10%;
   }
-
-
-
-
-
-
 
   .swiper-button-next::after {
     content: none;
@@ -1134,6 +1152,8 @@ li.price-title p:nth-of-type(2) {
   }
 
   .catalog-list{
+    width: fit-content;
+    margin: 0 auto;
     gap: 52px 46px;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1240,13 +1260,14 @@ li.price-title p:nth-of-type(2) {
 
   .partners-wrapper {
     height: 60px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     padding-left: 145px;
     padding-right: 145px;
   }
   
+  .partners-slide {
+    width: 280px
+  }
+
   .partners-swiper {
     width: 100%;
   }

@@ -14,6 +14,7 @@
 <body>
 
 <!-- Navbar -->
+ <div></div>
 <header class="navbar navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
@@ -138,83 +139,40 @@
     </li>
   </ul>
   <a class="navbar-brand" href="#">
-    <img src="../fiskasy/img/logo.png" alt="Logo" style="height: 70px;">
+    <img src="../fiskasy/img/logo.png" alt="Logo">
   </a>
   <input type="text" class="finder-input" placeholder="Wyszukaj...">
   </nav>
 </header>
-<div class="desktop-subheader">
-  <ul class="feedback-wrapper">
-    <li class="feedback-item">
-      <p class="feedback-text">MASZ PYTANIE?</p>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">WYŚLIJ WIADOMOŚĆ</a>
-    </li>
-  </ul>
-  <ul class="social-wrapper">
-    <li class="social-item">
-      <a class="social-link" href="#"></a>
-    </li>
-    <li class="social-item">
-      <a class="social-link" href="#"></a>
-    </li>
-    <li class="social-item">
-      <a class="social-link" href="#"></a>
-    </li>
-    <li class="social-item">
-      <a class="social-link" href="#"></a>
-    </li>
-  </ul>
-  <ul class="navmap-wrapper">
-    <li class="navmap-title"><p class="navmap-text">WYBIERZ SWOJĄ BRANŻE I POZNAJ URZĄDZENIA</p></li>
-    <li class="navmap-link">Salon fryzjerski, salon kosmetyczny</li>
-    <li class="navmap-link">Fitness i siłownie</li>
-    <li class="navmap-link">Branża budowlana</li>
-    <li class="navmap-link">Lekarze</li>
-    <li class="navmap-link">Prawnicy</li>
-    <li class="navmap-link">Mała gastronomia</li>
-    <li class="navmap-link">Warsztat samochodowy, wulkanizacja</li>
-    <li class="navmap-link">Apteka</li>
-    <li class="navmap-link">Taxi</li>
-    <li class="navmap-link">Piekarnia i cukiernia</li>
-    <li class="navmap-link">Mały punkt handlowo usługowy</li>
-    <li class="navmap-link">Sklep internetowy</li>
-  </ul>
-  <ul class="navmap-wrapper">
-    <li class="navmap-title"><p class="navmap-text">PORADNIK</p></li>
-    <li class="navmap-link">Jak wybrać urządzenie fiskalne</li>
-    <li class="navmap-link">Oprogramowanie do zarządzania firmą</li>
-    <li class="navmap-link">Sklep (systemy sprzedaży)</li>
-    <li class="navmap-link">Restauracja</li>
-  </ul>
-  <ul class="navmap-wrapper">
-    <li class="navmap-title"><p class="navmap-text">INFORMACJE</p></li>
-    <li class="navmap-link">Zmiana VAT. Programowanie kasy</li>
-    <li class="navmap-link">Przeglądy okresowe</li>
-    <li class="navmap-link">Porady prawne</li>
-    <li class="navmap-link">Często zadawne pytania</li>
-  </ul>
-</div>
-<div class="language-desktop">
-<p class="language-title">JĘZYK</p>
-<ul class="language-wrapper">
-  <li class="language-item">
-    <button class="language-button"></button>
-  </li>
-  <li class="language-item">
-    <button class="language-button"></button>
-  </li>
-  <li class="language-item">
-    <button class="language-button"></button>
-  </li>
-</ul>
-</div>
 <!-- hero -->
 
 <section class="hero-wrapper">
+  <div class="right-nav">
+    <ul class="feedback-wrapper">
+      <li class="feedback-item">
+        <p class="feedback-text">MASZ PYTANIE?</p>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">WYŚLIJ WIADOMOŚĆ</a>
+      </li>
+    </ul>
+    <ul class="social-wrapper">
+      <li class="social-item">
+        <a class="social-link" href="#"></a>
+      </li>
+      <li class="social-item">
+        <a class="social-link" href="#"></a>
+      </li>
+      <li class="social-item">
+        <a class="social-link" href="#"></a>
+      </li>
+      <li class="social-item">
+        <a class="social-link" href="#"></a>
+      </li>
+    </ul>
+  </div>
     <div class="hero-switcher" id="heroSwitcher">
-      <button class="switcher-button left" id="switcherButton"></button>
+      <button class="switcher-button left hidden" id="switcherButton"></button>
       <div class="image-wrapper">
         <div class='switcher-image'></div>
       </div>
@@ -237,17 +195,62 @@
       <li><p>cenna netto</p></li>
       <li><p id="priceValue">1429,00 zł</p></li>
     </ul>
-    <button class="switcher-button right" id="switcherButton"></button>
+    <button class="switcher-button right hidden" id="switcherButton"></button>
     </div>
+    <div class="language-desktop">
+      <p class="language-title">JĘZYK</p>
+      <ul class="language-wrapper">
+        <li class="language-item">
+          <button class="language-button"></button>
+        </li>
+        <li class="language-item">
+          <button class="language-button"></button>
+        </li>
+        <li class="language-item">
+          <button class="language-button"></button>
+        </li>
+      </ul>
 </section>
 
 <!-- Promotion -->
-
-<section class="shop-wrapper">
-  <div class="swiper-section">
+<section class="page-core">
+  <div class="side-nav">
+    <ul class="navmap-wrapper">
+      <li class="navmap-title"><p class="navmap-text">WYBIERZ SWOJĄ BRANŻE I POZNAJ URZĄDZENIA</p></li>
+      <li class="navmap-link">Salon fryzjerski, salon kosmetyczny</li>
+      <li class="navmap-link">Fitness i siłownie</li>
+      <li class="navmap-link">Branża budowlana</li>
+      <li class="navmap-link">Lekarze</li>
+      <li class="navmap-link">Prawnicy</li>
+      <li class="navmap-link">Mała gastronomia</li>
+      <li class="navmap-link">Warsztat samochodowy, wulkanizacja</li>
+      <li class="navmap-link">Apteka</li>
+      <li class="navmap-link">Taxi</li>
+      <li class="navmap-link">Piekarnia i cukiernia</li>
+      <li class="navmap-link">Mały punkt handlowo usługowy</li>
+      <li class="navmap-link">Sklep internetowy</li>
+    </ul>
+    <ul class="navmap-wrapper">
+      <li class="navmap-title"><p class="navmap-text">PORADNIK</p></li>
+      <li class="navmap-link">Jak wybrać urządzenie fiskalne</li>
+      <li class="navmap-link">Oprogramowanie do zarządzania firmą</li>
+      <li class="navmap-link">Sklep (systemy sprzedaży)</li>
+      <li class="navmap-link">Restauracja</li>
+    </ul>
+    <ul class="navmap-wrapper">
+      <li class="navmap-title"><p class="navmap-text">INFORMACJE</p></li>
+      <li class="navmap-link">Zmiana VAT. Programowanie kasy</li>
+      <li class="navmap-link">Przeglądy okresowe</li>
+      <li class="navmap-link">Porady prawne</li>
+      <li class="navmap-link">Często zadawne pytania</li>
+    </ul>
+  </div>
+<!-- content -->
+  <div class="content-wrapper">
     <p class="promotion-title">PROMOCJE</p>
+  <div class="promotion-wrapper">
     <div class="swiper-button-next"></div>
-    <div class="promotion-swiper">
+    <div class="swiper promotion-swiper">
       <ul class="swiper-wrapper promotion-list">
         <li class="swiper-slide promotion-item">
           <p class="promotion-descr">Posnet Thermal HD Online</p>
@@ -368,6 +371,7 @@
   </div>
 </section>
 
+
 <section class="about-wrapper">
   <p class="about-title">KONTAKT</p>
   <ul class="contact-wrapper mobile">
@@ -432,8 +436,7 @@
 
 <!-- footer section  --> 
 
-<section class="partners-wrapper">
-  <div class="partners-swiper">
+  <section class="swiper partners-swiper">
     <ul class="swiper-wrapper partners-list">
       <li class="swiper-slide partners-slide">
         <img class="partners-item" src="./img/partner1.png" alt="posnet logo">
@@ -450,8 +453,7 @@
     </ul>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
-  </div>
-</section>
+  </section>
 
 <!-- footer  -->
 

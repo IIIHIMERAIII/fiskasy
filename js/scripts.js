@@ -28,27 +28,37 @@ $(document).ready(function() {
         console.log('Button clicked'); // Debuging log
         $(this).toggleClass('active');
         $('.hero-switcher').toggleClass('active');
+        $('.image-wrapper').toggleClass('active');
     });
 });
 
 // hero switcher label logic
 
 $(document).ready(function() {
-    // Toggle state
     let isDefault = true;
 
-    $('.switcher-button').click(function() { 
+    $('#rightButton').click(function() {
         if (isDefault) {
-            // Change text to alternative values
             $('#productName').html('ELZAB Zeta Online');
             $('#priceValue').text('1990,00 zł');
+            $('.left').removeClass('hidden');  // Show left button
+            $('.right').addClass('hidden');    // Hide right button
         } else {
-            // Change text back to default values
             $('#productName').html('DATECS WP-50 Wi-FI Online');
             $('#priceValue').text('1429,00 zł');
+            $('.left').addClass('hidden');     // Hide left button
+            $('.right').removeClass('hidden'); // Show right button
         }
         isDefault = !isDefault; // Toggle state
-    })
+    });
+
+    $('#leftButton').click(function() {
+        $('#productName').html('DATECS WP-50 Wi-FI Online');
+        $('#priceValue').text('1429,00 zł');
+        $('.left').addClass('hidden');     // Hide left button
+        $('.right').removeClass('hidden'); // Show right button
+        isDefault = true; // Reset state to default
+    });
 });
 //Swipers 
 
@@ -57,20 +67,20 @@ $(document).ready(function() {
 
 $(document).ready(function () {
     var swiper = new Swiper('.promotion-swiper', {
-        centeredSlides: false, // centered items
+        centeredSlides: true, // centered items
         loop: true, // swaping loop
-        spaceBetween: 40,
+        spaceBetween: 30,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
             1200: {
-                slidesPerView: 'auto', // 3 items per page + calculate with
+                slidesPerView: 3, // 3 items per page + calculate with
             },
             0: {
                 slidesPerView: 3, // Value for screens smaller than 1200px
-                spaceBetween: 35,
+                spaceBetween: 40,
             },
         },  
     });
@@ -89,7 +99,8 @@ $(document).ready(function () {
         },
         breakpoints: {
             1200: {
-                slidesPerView: 'auto', // 4 items per page + calculate with
+                slidesPerView: 'auto', // 
+                centeredSlides: false,
             },
             0: {
                 slidesPerView: 3/1.4 // Value for screens smaller than 1200px
